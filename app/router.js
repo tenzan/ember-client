@@ -6,6 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('posts');
+  this.route('tags');
 });
 
 export default Router;
