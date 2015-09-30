@@ -1,14 +1,21 @@
 <h1>Tags</h1>
 
-<ol>
-  {{#each model as |tag|}}
-      <li><h2>{{tag.name}}</h2></li>
-    <ul>
-      {{#each tag.posts as |post|}}
-          <li><h2>{{post.title}}</h2></li>
-      {{/each}}
-    </ul>
-  {{/each}}
-</ol>
+{{#paper-content class="md-whiteframe-z1 list-demo"}}
+  {{#paper-list}}
+    {{#each model as |tag|}}
+      {{#paper-item class="md-3-line"}}
+          <div class="md-list-item-text">
+              <h3>ID: {{tag.id}}</h3>
+              <h3>Name: {{tag.name}}</h3>
+              <p>Posts:
+                {{#each tag.posts as |post|}}
+                  {{post.title}}
+                {{/each}}
+              </p>
+          </div>
+      {{/paper-item}}
+    {{/each}}
+  {{/paper-list}}
+{{/paper-content}}
 
 {{outlet}}
