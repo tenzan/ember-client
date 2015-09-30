@@ -18,3 +18,8 @@ testem.log
 
 # JetBrains
 .idea
+
+# Divshot
+.divshot-cache/
+divshot-debug.log
+divshot.json
