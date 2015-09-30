@@ -1,12 +1,15 @@
 <h1>Posts</h1>
 
-<ul>
+<ol>
   {{#each model as |post|}}
-      <li>{{post.title}}</li>
-  {{else}}
-     No posts found
+      <li><h2>{{post.title}}</h2></li>
+    <ul>
+      {{#each post.tags as |tag|}}
+          <li><h2>{{tag.name}}</h2></li>
+      {{/each}}
+    </ul>
   {{/each}}
-</ul>
+</ol>
 
 {{outlet}}
 

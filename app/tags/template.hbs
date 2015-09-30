@@ -1,11 +1,14 @@
 <h1>Tags</h1>
 
-<ul>
+<ol>
   {{#each model as |tag|}}
-      <li>{{tag.name}}</li>
-  {{else}}
-      No tags found
+      <li><h2>{{tag.name}}</h2></li>
+    <ul>
+      {{#each tag.posts as |post|}}
+          <li><h2>{{post.titlegit }}</h2></li>
+      {{/each}}
+    </ul>
   {{/each}}
-</ul>
+</ol>
 
 {{outlet}}
